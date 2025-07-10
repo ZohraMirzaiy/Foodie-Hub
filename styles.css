@@ -1,0 +1,1604 @@
+/* Custom CSS for Foodie Hub - Korean Cuisine Theme */
+
+/* Global Styles */
+:root {
+    --primary-color: #dc3545;
+    --secondary-color: #ffc107;
+    --accent-color: #28a745;
+    --dark-color: #343a40;
+    --light-color: #f8f9fa;
+    --korean-red: #e74c3c;
+    --korean-gold: #f39c12;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    animation: fadeInBody 1.2s ease-in;
+}
+
+@keyframes fadeInBody {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero-overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    margin-bottom: 2rem;
+    letter-spacing: 0.02em;
+}
+
+/* Section Titles */
+.section-title {
+    font-family: 'Playfair Display', serif;
+    color: var(--dark-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    position: relative;
+    letter-spacing: -0.01em;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: titleIn 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    animation-delay: 0.3s;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+}
+
+.section-subtitle {
+    font-family: 'Poppins', sans-serif;
+    color: #6c757d;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    letter-spacing: 0.01em;
+    opacity: 0;
+    animation: subtitleIn 1.2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    animation-delay: 0.6s;
+}
+
+/* Restaurant Cards */
+.restaurant-card {
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    animation: cardIn 0.9s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    animation-delay: 0.2s;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.restaurant-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.restaurant-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.restaurant-card .card-body {
+    padding: 1.5rem;
+}
+
+.restaurant-card .card-title {
+    font-family: 'Playfair Display', serif;
+    color: var(--dark-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+}
+
+.restaurant-card .card-text {
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+/* Menu Cards */
+.menu-card {
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    animation: cardIn 0.9s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    animation-delay: 0.2s;
+}
+
+.menu-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.menu-card .card-body {
+    padding: 1.5rem;
+}
+
+.menu-card .card-title {
+    font-family: 'Playfair Display', serif;
+    color: var(--dark-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    letter-spacing: -0.01em;
+}
+
+.menu-card .card-text {
+    color: #6c757d;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.menu-card .price {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+/* Order Form */
+.order-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+}
+
+.form-check-label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: var(--dark-color);
+}
+
+/* Restaurant Links */
+.restaurant-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.restaurant-link:hover {
+    color: #c82333;
+    text-decoration: underline;
+    transform: translateY(-1px);
+}
+
+.restaurant-link::after {
+    content: '📍';
+    margin-left: 4px;
+    font-size: 0.8em;
+    opacity: 0.7;
+}
+
+.restaurant-link:hover::after {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.menu-items-container {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 1rem;
+    background: #f8f9fa;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.quantity-input {
+    width: 80px;
+    margin-left: 1rem;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: 0.02em;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+    transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Social Icons */
+.social-icons a {
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    color: var(--primary-color) !important;
+}
+
+/* Responsive Design */
+
+/* Large Tablets and Small Desktops */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 3rem;
+        font-family: 'Playfair Display', serif;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.6rem;
+        font-family: 'Dancing Script', cursive;
+    }
+    
+    .restaurant-card .card-img-top {
+        height: 180px;
+    }
+    
+    .order-form {
+        padding: 1.5rem;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+        font-family: 'Playfair Display', serif;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.4rem;
+        font-family: 'Dancing Script', cursive;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .restaurant-card {
+        margin-bottom: 1rem;
+    }
+    
+    .restaurant-card .card-img-top {
+        height: 160px;
+    }
+    
+    .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .quantity-input {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .order-form {
+        padding: 1rem;
+    }
+    
+    .hero-section {
+        background-attachment: scroll;
+    }
+    
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .menu-card .card-title {
+        font-size: 1rem;
+    }
+    
+    .menu-card .card-text {
+        font-size: 0.85rem;
+    }
+    
+    .menu-card .price {
+        font-size: 1rem;
+    }
+}
+
+/* Large Phones */
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2rem;
+        font-family: 'Playfair Display', serif;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+        font-family: 'Dancing Script', cursive;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .hero-section {
+        background-attachment: scroll;
+        height: 80vh;
+    }
+    
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+    
+    .restaurant-card .card-img-top {
+        height: 140px;
+    }
+    
+    .order-form {
+        padding: 0.75rem;
+    }
+    
+    .menu-card .card-title {
+        font-size: 0.9rem;
+    }
+    
+    .menu-card .card-text {
+        font-size: 0.8rem;
+    }
+    
+    .menu-card .price {
+        font-size: 0.9rem;
+    }
+    
+    .btn-lg {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.75rem;
+        font-family: 'Playfair Display', serif;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        font-family: 'Dancing Script', cursive;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.85rem;
+    }
+    
+    .hero-section {
+        height: 70vh;
+    }
+    
+    .navbar-brand {
+        font-size: 1rem;
+    }
+    
+    .restaurant-card .card-img-top {
+        height: 120px;
+    }
+    
+    .order-form {
+        padding: 0.5rem;
+    }
+    
+    .menu-card .card-body {
+        padding: 1rem;
+    }
+    
+    .menu-card .card-title {
+        font-size: 0.85rem;
+    }
+    
+    .menu-card .card-text {
+        font-size: 0.75rem;
+    }
+    
+    .menu-card .price {
+        font-size: 0.85rem;
+    }
+    
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .btn-lg {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+/* Extra Small Phones */
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 1.5rem;
+        font-family: 'Playfair Display', serif;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+        font-family: 'Dancing Script', cursive;
+    }
+    
+    .section-title {
+        font-size: 1.25rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.8rem;
+    }
+    
+    .hero-section {
+        height: 60vh;
+    }
+    
+    .navbar-brand {
+        font-size: 0.9rem;
+    }
+    
+    .restaurant-card .card-img-top {
+        height: 100px;
+    }
+    
+    .order-form {
+        padding: 0.25rem;
+    }
+    
+    .menu-card .card-body {
+        padding: 0.75rem;
+    }
+    
+    .menu-card .card-title {
+        font-size: 0.8rem;
+    }
+    
+    .menu-card .card-text {
+        font-size: 0.7rem;
+    }
+    
+    .menu-card .price {
+        font-size: 0.8rem;
+    }
+    
+    .btn {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
+    }
+    
+    .btn-lg {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
+    }
+}
+
+/* Availability Badges */
+.badge-available {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.badge-unavailable {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Smooth transitions for all interactive elements */
+.card, .btn, .nav-link, .social-icons a {
+    transition: all 0.3s ease;
+}
+
+/* Card entrance animation */
+@keyframes cardIn {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Staggered animation for cards */
+.restaurant-card:nth-child(1), .menu-card:nth-child(1) { animation-delay: 0.2s; }
+.restaurant-card:nth-child(2), .menu-card:nth-child(2) { animation-delay: 0.35s; }
+.restaurant-card:nth-child(3), .menu-card:nth-child(3) { animation-delay: 0.5s; }
+.restaurant-card:nth-child(4), .menu-card:nth-child(4) { animation-delay: 0.65s; }
+.restaurant-card:nth-child(5), .menu-card:nth-child(5) { animation-delay: 0.8s; }
+.restaurant-card:nth-child(6), .menu-card:nth-child(6) { animation-delay: 0.95s; }
+
+/* Image hover shine effect */
+.card-img-top {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.card-img-top::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -75%;
+    width: 50%; height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.0) 100%);
+    transition: left 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    pointer-events: none;
+}
+.card:hover .card-img-top::after, .restaurant-card:hover .card-img-top::after, .menu-card:hover .card-img-top::after {
+    left: 100%;
+}
+
+/* Section title slide-in/fade-in */
+@keyframes titleIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section subtitle fade-in */
+@keyframes subtitleIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #c82333;
+}
+
+/* Focus states for accessibility */
+.btn:focus, .form-control:focus, .form-select:focus {
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+    border-color: var(--primary-color);
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+    /* Improve touch targets */
+    .btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .nav-link {
+        padding: 0.75rem 1rem;
+    }
+    
+    /* Better spacing for mobile */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    /* Improve form usability on mobile */
+    .form-control, .form-select {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    /* Better card spacing */
+    .card-body {
+        padding: 1rem;
+    }
+    
+    /* Improve menu item layout on mobile */
+    .menu-item {
+        padding: 0.75rem 0;
+    }
+    
+    /* Better social icons spacing */
+    .social-icons a {
+        margin: 0 0.5rem;
+    }
+}
+
+/* Tablet-specific improvements */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-title {
+        font-size: 3.2rem;
+    }
+    
+    .restaurant-card .card-img-top {
+        height: 200px;
+    }
+    
+    .order-form {
+        padding: 2rem;
+    }
+    
+    /* Better grid layout for tablets */
+    .col-lg-3.col-md-6 {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Loading animation for images */
+.card-img-top {
+    transition: opacity 0.3s ease;
+}
+
+.card-img-top[src*="unsplash"] {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+} 
+
+/* Modern Menu Card Styles */
+.menu-card {
+    background: linear-gradient(135deg, #fff 80%, #f8f9fa 100%);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px 0 rgba(44, 62, 80, 0.08), 0 1.5px 4px 0 rgba(44, 62, 80, 0.04);
+    border: none;
+    margin-bottom: 1.5rem;
+    transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+.menu-card:hover {
+    box-shadow: 0 8px 32px 0 rgba(44, 62, 80, 0.16), 0 3px 12px 0 rgba(44, 62, 80, 0.08);
+    transform: translateY(-4px) scale(1.015);
+}
+.menu-card .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.25rem 1.5rem 1.25rem 1.5rem;
+}
+.menu-card .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #232323;
+    margin-bottom: 0.25rem;
+}
+.menu-card .card-text {
+    font-family: 'Poppins', sans-serif;
+    color: #444;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+.menu-card .price {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    background: #fff5f5;
+    border-radius: 1.25rem;
+    padding: 0.25rem 1rem;
+    margin-left: 0.5rem;
+    box-shadow: 0 1px 4px 0 rgba(220, 53, 69, 0.08);
+    letter-spacing: 0.01em;
+}
+.menu-card .d-flex {
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.badge-available, .badge-unavailable {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 0.35em 1.1em;
+    box-shadow: 0 1px 4px 0 rgba(40, 167, 69, 0.08);
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.01em;
+}
+.badge-available {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+.badge-unavailable {
+    background-color: #dc3545;
+    color: #fff;
+}
+@media (max-width: 768px) {
+    .menu-card .card-body {
+        padding: 1rem 0.75rem 1rem 0.75rem;
+    }
+    .menu-card .card-title {
+        font-size: 1.05rem;
+    }
+    .menu-card .price {
+        font-size: 1rem;
+        padding: 0.2rem 0.7rem;
+    }
+}
+@media (max-width: 480px) {
+    .menu-card .card-body {
+        padding: 0.75rem 0.5rem 0.75rem 0.5rem;
+    }
+    .menu-card .card-title {
+        font-size: 0.98rem;
+    }
+    .menu-card .price {
+        font-size: 0.95rem;
+        padding: 0.15rem 0.5rem;
+    }
+} 
+
+/* WOW Glassmorphism Menu Card Styles */
+.menu-card-alt {
+    position: relative;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 22px;
+    box-shadow: 0 8px 32px 0 rgba(52, 152, 219, 0.18), 0 3px 12px 0 rgba(52, 152, 219, 0.10);
+    border: 2.5px solid transparent;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    backdrop-filter: blur(12px) saturate(1.2);
+    -webkit-backdrop-filter: blur(12px) saturate(1.2);
+    transition: box-shadow 0.4s cubic-bezier(0.23, 1, 0.32, 1), transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), border 0.4s;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    z-index: 1;
+}
+.menu-card-alt::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border-radius: 22px;
+    padding: 2px;
+    background: linear-gradient(120deg, #6dd5ed, #2193b0, #b8e0ff, #6dd5ed 80%);
+    background-size: 200% 200%;
+    animation: borderMove 3s linear infinite;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+@keyframes borderMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+.menu-card-alt:hover {
+    box-shadow: 0 16px 48px 0 rgba(52, 152, 219, 0.28), 0 6px 24px 0 rgba(52, 152, 219, 0.18);
+    transform: translateY(-8px) scale(1.025);
+    border-color: #6dd5ed;
+}
+.menu-card-alt .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    position: relative;
+    z-index: 1;
+    animation: fadeSlideIn 1.1s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+@keyframes fadeSlideIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.menu-card-alt .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.22rem;
+    font-weight: 700;
+    color: #1a3a5d;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.01em;
+    text-shadow: 0 2px 8px rgba(52, 152, 219, 0.08);
+}
+.menu-card-alt .card-text {
+    font-family: 'Poppins', sans-serif;
+    color: #2d3e50;
+    font-size: 1.01rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 1px 4px rgba(52, 152, 219, 0.04);
+}
+.menu-card-alt .price {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.18rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(90deg, #2193b0 0%, #6dd5ed 100%);
+    border-radius: 1.5rem;
+    padding: 0.3rem 1.2rem;
+    margin-left: 0.5rem;
+    box-shadow: 0 2px 8px 0 rgba(52, 152, 219, 0.18);
+    letter-spacing: 0.01em;
+    text-shadow: 0 2px 8px rgba(52, 152, 219, 0.18);
+    border: 2px solid #b8e0ff;
+    animation: glowPrice 2.5s infinite alternate;
+}
+@keyframes glowPrice {
+    from { box-shadow: 0 0 8px 0 #6dd5ed88; }
+    to { box-shadow: 0 0 24px 4px #2193b088; }
+}
+.menu-card-alt .d-flex {
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.menu-card-alt .badge-available, .menu-card-alt .badge-unavailable {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.01rem;
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 0.4em 1.2em;
+    box-shadow: 0 2px 8px 0 rgba(52, 152, 219, 0.10);
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.01em;
+    background: linear-gradient(90deg, #6dd5ed 0%, #2193b0 100%);
+    color: #fff;
+    border: 1.5px solid #b8e0ff;
+    animation: badgePulse 2.2s infinite alternate;
+}
+@keyframes badgePulse {
+    from { box-shadow: 0 0 8px 0 #6dd5ed55; }
+    to { box-shadow: 0 0 18px 2px #2193b055; }
+}
+.menu-card-alt .badge-unavailable {
+    background: linear-gradient(90deg, #e74c3c 0%, #ffb199 100%);
+    border: 1.5px solid #e74c3c;
+    color: #fff;
+    animation: badgePulseRed 2.2s infinite alternate;
+}
+@keyframes badgePulseRed {
+    from { box-shadow: 0 0 8px 0 #e74c3c55; }
+    to { box-shadow: 0 0 18px 2px #e74c3c55; }
+}
+@media (max-width: 768px) {
+    .menu-card-alt .card-body {
+        padding: 1rem 0.75rem 1rem 0.75rem;
+    }
+    .menu-card-alt .card-title {
+        font-size: 1.08rem;
+    }
+    .menu-card-alt .price {
+        font-size: 1.05rem;
+        padding: 0.22rem 0.8rem;
+    }
+}
+@media (max-width: 480px) {
+    .menu-card-alt .card-body {
+        padding: 0.75rem 0.5rem 0.75rem 0.5rem;
+    }
+    .menu-card-alt .card-title {
+        font-size: 1.01rem;
+    }
+    .menu-card-alt .price {
+        font-size: 0.98rem;
+        padding: 0.15rem 0.5rem;
+    }
+} 
+
+/* Elegant Glassmorphism Card (for first three pages) */
+.menu-card-elegant {
+    position: relative;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 22px;
+    box-shadow: 0 8px 32px 0 rgba(220, 53, 69, 0.12), 0 3px 12px 0 rgba(220, 53, 69, 0.08);
+    border: 2.5px solid #ffe0e6;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    backdrop-filter: blur(10px) saturate(1.1);
+    -webkit-backdrop-filter: blur(10px) saturate(1.1);
+    transition: box-shadow 0.4s, transform 0.4s, border 0.4s;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    z-index: 1;
+}
+.menu-card-elegant::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border-radius: 22px;
+    padding: 2px;
+    background: linear-gradient(120deg, #ffe0e6, #fff5f5, #fffbe6, #ffe0e6 80%);
+    background-size: 200% 200%;
+    animation: borderMoveRed 3s linear infinite;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+@keyframes borderMoveRed {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+.menu-card-elegant:hover {
+    box-shadow: 0 16px 48px 0 rgba(220, 53, 69, 0.18), 0 6px 24px 0 rgba(220, 53, 69, 0.10);
+    transform: translateY(-8px) scale(1.025);
+    border-color: #ffe0e6;
+}
+.menu-card-elegant .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    position: relative;
+    z-index: 1;
+    animation: fadeSlideIn 1.1s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+.menu-card-elegant .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.22rem;
+    font-weight: 700;
+    color: #a71d2a;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.01em;
+    text-shadow: 0 2px 8px rgba(220, 53, 69, 0.08);
+}
+.menu-card-elegant .card-text {
+    font-family: 'Poppins', sans-serif;
+    color: #4d2323;
+    font-size: 1.01rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 1px 4px rgba(220, 53, 69, 0.04);
+}
+.menu-card-elegant .price {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.18rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(90deg, #dc3545 0%, #ffc1cc 100%);
+    border-radius: 1.5rem;
+    padding: 0.3rem 1.2rem;
+    margin-left: 0.5rem;
+    box-shadow: 0 2px 8px 0 rgba(220, 53, 69, 0.18);
+    letter-spacing: 0.01em;
+    text-shadow: 0 2px 8px rgba(220, 53, 69, 0.18);
+    border: 2px solid #ffe0e6;
+    animation: glowPriceRed 2.5s infinite alternate;
+}
+@keyframes glowPriceRed {
+    from { box-shadow: 0 0 8px 0 #ffc1cc88; }
+    to { box-shadow: 0 0 24px 4px #dc354588; }
+}
+.menu-card-elegant .d-flex {
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.menu-card-elegant .badge-available, .menu-card-elegant .badge-unavailable {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.01rem;
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 0.4em 1.2em;
+    box-shadow: 0 2px 8px 0 rgba(220, 53, 69, 0.10);
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.01em;
+    background: linear-gradient(90deg, #dc3545 0%, #ffc1cc 100%);
+    color: #fff;
+    border: 1.5px solid #ffe0e6;
+    animation: badgePulseRed 2.2s infinite alternate;
+}
+.menu-card-elegant .badge-unavailable {
+    background: linear-gradient(90deg, #e74c3c 0%, #ffb199 100%);
+    border: 1.5px solid #e74c3c;
+    color: #fff;
+    animation: badgePulseRed 2.2s infinite alternate;
+}
+
+/* Neon/Dark Card (for next three pages) */
+.menu-card-neon {
+    position: relative;
+    background: linear-gradient(135deg, #181c2f 80%, #232946 100%);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(52, 152, 219, 0.22), 0 3px 12px 0 rgba(52, 152, 219, 0.18);
+    border: 2.5px solid #00fff0;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    transition: box-shadow 0.4s, transform 0.4s, border 0.4s;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    z-index: 1;
+}
+.menu-card-neon::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border-radius: 20px;
+    padding: 2px;
+    background: linear-gradient(120deg, #00fff0, #00bfff, #ff00cc, #00fff0 80%);
+    background-size: 200% 200%;
+    animation: borderMoveNeon 3s linear infinite;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+@keyframes borderMoveNeon {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+.menu-card-neon:hover {
+    box-shadow: 0 16px 48px 0 #00fff088, 0 6px 24px 0 #00bfff88;
+    transform: translateY(-8px) scale(1.03);
+    border-color: #ff00cc;
+}
+.menu-card-neon .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    position: relative;
+    z-index: 1;
+    animation: fadeSlideInNeon 1.1s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+@keyframes fadeSlideInNeon {
+    from { opacity: 0; transform: translateY(40px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.menu-card-neon .card-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.22rem;
+    font-weight: 800;
+    color: #00fff0;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.01em;
+    text-shadow: 0 2px 8px #00fff088, 0 0 8px #00bfff88;
+}
+.menu-card-neon .card-text {
+    font-family: 'Poppins', sans-serif;
+    color: #e0e0e0;
+    font-size: 1.01rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 1px 4px #00fff044;
+}
+.menu-card-neon .price {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.18rem;
+    font-weight: 700;
+    color: #181c2f;
+    background: linear-gradient(90deg, #00fff0 0%, #ff00cc 100%);
+    border-radius: 1.5rem;
+    padding: 0.3rem 1.2rem;
+    margin-left: 0.5rem;
+    box-shadow: 0 2px 8px 0 #00fff088;
+    letter-spacing: 0.01em;
+    text-shadow: 0 2px 8px #00fff088;
+    border: 2px solid #00fff0;
+    animation: glowPriceNeon 2.5s infinite alternate;
+}
+@keyframes glowPriceNeon {
+    from { box-shadow: 0 0 8px 0 #00fff088; }
+    to { box-shadow: 0 0 24px 4px #ff00cc88; }
+}
+.menu-card-neon .d-flex {
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.menu-card-neon .badge-available, .menu-card-neon .badge-unavailable {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.01rem;
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 0.4em 1.2em;
+    box-shadow: 0 2px 8px 0 #00fff088;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.01em;
+    background: linear-gradient(90deg, #00fff0 0%, #00bfff 100%);
+    color: #181c2f;
+    border: 1.5px solid #00fff0;
+    animation: badgePulseNeon 2.2s infinite alternate;
+}
+@keyframes badgePulseNeon {
+    from { box-shadow: 0 0 8px 0 #00fff088; }
+    to { box-shadow: 0 0 18px 2px #00bfff88; }
+}
+.menu-card-neon .badge-unavailable {
+    background: linear-gradient(90deg, #e74c3c 0%, #ff00cc 100%);
+    border: 1.5px solid #e74c3c;
+    color: #fff;
+    animation: badgePulseRed 2.2s infinite alternate;
+}
+@media (max-width: 768px) {
+    .menu-card-elegant .card-body, .menu-card-neon .card-body {
+        padding: 1rem 0.75rem 1rem 0.75rem;
+    }
+    .menu-card-elegant .card-title, .menu-card-neon .card-title {
+        font-size: 1.08rem;
+    }
+    .menu-card-elegant .price, .menu-card-neon .price {
+        font-size: 1.05rem;
+        padding: 0.22rem 0.8rem;
+    }
+}
+@media (max-width: 480px) {
+    .menu-card-elegant .card-body, .menu-card-neon .card-body {
+        padding: 0.75rem 0.5rem 0.75rem 0.5rem;
+    }
+    .menu-card-elegant .card-title, .menu-card-neon .card-title {
+        font-size: 1.01rem;
+    }
+    .menu-card-elegant .price, .menu-card-neon .price {
+        font-size: 0.98rem;
+        padding: 0.15rem 0.5rem;
+    }
+} 
+
+/* Desert Card: Soft glassmorphism, pastel, rounded */
+.menu-card-desert {
+    position: relative;
+    background: rgba(255, 245, 235, 0.85);
+    border-radius: 2.5rem 1.2rem 2.5rem 1.2rem / 1.2rem 2.5rem 1.2rem 2.5rem;
+    box-shadow: 0 8px 32px 0 rgba(255, 183, 77, 0.18), 0 3px 12px 0 rgba(255, 183, 77, 0.10);
+    border: 2.5px solid #ffe0b2;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    backdrop-filter: blur(8px) saturate(1.1);
+    -webkit-backdrop-filter: blur(8px) saturate(1.1);
+    transition: box-shadow 0.4s, transform 0.4s, border 0.4s;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    z-index: 1;
+    animation: fadeSlideInDesert 1.1s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+@keyframes fadeSlideInDesert {
+    from { opacity: 0; transform: translateY(40px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.menu-card-desert .card-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ff9800;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.01em;
+    text-shadow: 0 2px 8px #ffe0b2;
+}
+.menu-card-desert .card-text {
+    font-family: 'Poppins', sans-serif;
+    color: #7c4a03;
+    font-size: 1.01rem;
+    margin-bottom: 0.5rem;
+}
+.menu-card-desert .price {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(90deg, #ffb74d 0%, #ffe0b2 100%);
+    border-radius: 1.5rem;
+    padding: 0.3rem 1.2rem;
+    margin-left: 0.5rem;
+    box-shadow: 0 2px 8px 0 #ffb74d88;
+    border: 2px solid #ffe0b2;
+    animation: glowPriceDesert 2.5s infinite alternate;
+}
+@keyframes glowPriceDesert {
+    from { box-shadow: 0 0 8px 0 #ffe0b288; }
+    to { box-shadow: 0 0 24px 4px #ffb74d88; }
+}
+.menu-card-desert .badge-available, .menu-card-desert .badge-unavailable {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.01rem;
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 0.4em 1.2em;
+    background: linear-gradient(90deg, #ffb74d 0%, #ffe0b2 100%);
+    color: #fff;
+    border: 1.5px solid #ffe0b2;
+    animation: badgePulseDesert 2.2s infinite alternate;
+}
+@keyframes badgePulseDesert {
+    from { box-shadow: 0 0 8px 0 #ffe0b288; }
+    to { box-shadow: 0 0 18px 2px #ffb74d88; }
+}
+.menu-card-desert .badge-unavailable {
+    background: linear-gradient(90deg, #e57373 0%, #ffe0b2 100%);
+    border: 1.5px solid #e57373;
+    color: #fff;
+}
+
+/* Hot Card: Bold, angular, spicy red/orange, flame accent */
+.menu-card-hot {
+    position: relative;
+    background: linear-gradient(120deg, #fff3e0 60%, #ff7043 100%);
+    border-radius: 1.2rem 2.5rem 1.2rem 2.5rem / 2.5rem 1.2rem 2.5rem 1.2rem;
+    box-shadow: 0 8px 32px 0 #ff704388, 0 3px 12px 0 #ff704344;
+    border: 2.5px solid #ff7043;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    transition: box-shadow 0.4s, transform 0.4s, border 0.4s;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    z-index: 1;
+    animation: fadeSlideInHot 1.1s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+@keyframes fadeSlideInHot {
+    from { opacity: 0; transform: translateY(-40px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.menu-card-hot .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #d84315;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.01em;
+    text-shadow: 0 2px 8px #ff704388;
+    position: relative;
+}
+.menu-card-hot .card-title::after {
+    content: '\1F525'; /* flame emoji */
+    font-size: 1.1em;
+    margin-left: 0.3em;
+    vertical-align: middle;
+    animation: flameWiggle 1.2s infinite alternate;
+}
+@keyframes flameWiggle {
+    from { transform: rotate(-8deg) scale(1.1); }
+    to { transform: rotate(8deg) scale(1.2); }
+}
+.menu-card-hot .card-text {
+    font-family: 'Poppins', sans-serif;
+    color: #bf360c;
+    font-size: 1.01rem;
+    margin-bottom: 0.5rem;
+}
+.menu-card-hot .price {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(90deg, #ff7043 0%, #ffccbc 100%);
+    border-radius: 0.8rem 2rem 0.8rem 2rem;
+    padding: 0.3rem 1.2rem;
+    margin-left: 0.5rem;
+    box-shadow: 0 2px 8px 0 #ff704388;
+    border: 2px solid #ff7043;
+    animation: glowPriceHot 2.5s infinite alternate;
+}
+@keyframes glowPriceHot {
+    from { box-shadow: 0 0 8px 0 #ff704388; }
+    to { box-shadow: 0 0 24px 4px #ff704388; }
+}
+.menu-card-hot .badge-available, .menu-card-hot .badge-unavailable {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.01rem;
+    font-weight: 600;
+    border-radius: 1.5rem 2.5rem 1.5rem 2.5rem;
+    padding: 0.4em 1.2em;
+    background: linear-gradient(90deg, #ff7043 0%, #ffccbc 100%);
+    color: #fff;
+    border: 1.5px solid #ff7043;
+    animation: badgePulseHot 2.2s infinite alternate;
+}
+@keyframes badgePulseHot {
+    from { box-shadow: 0 0 8px 0 #ff704388; }
+    to { box-shadow: 0 0 18px 2px #ff704388; }
+}
+.menu-card-hot .badge-unavailable {
+    background: linear-gradient(90deg, #e57373 0%, #ffccbc 100%);
+    border: 1.5px solid #e57373;
+    color: #fff;
+}
+
+/* Sweet Card: Dark mode, neon, playful, curved */
+.menu-card-sweet {
+    position: relative;
+    background: linear-gradient(135deg, #232946 80%, #181c2f 100%);
+    border-radius: 2.5rem 2.5rem 1.2rem 1.2rem / 1.2rem 1.2rem 2.5rem 2.5rem;
+    box-shadow: 0 8px 32px 0 #00fff088, 0 3px 12px 0 #ff00cc44;
+    border: 2.5px solid #ff00cc;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    transition: box-shadow 0.4s, transform 0.4s, border 0.4s;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    z-index: 1;
+    animation: fadeSlideInSweet 1.1s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+@keyframes fadeSlideInSweet {
+    from { opacity: 0; transform: translateY(40px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.menu-card-sweet .card-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ff00cc;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.01em;
+    text-shadow: 0 2px 8px #00fff088;
+}
+.menu-card-sweet .card-text {
+    font-family: 'Poppins', sans-serif;
+    color: #e0e0e0;
+    font-size: 1.01rem;
+    margin-bottom: 0.5rem;
+}
+.menu-card-sweet .price {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #181c2f;
+    background: linear-gradient(90deg, #ff00cc 0%, #00fff0 100%);
+    border-radius: 2rem 0.8rem 2rem 0.8rem;
+    padding: 0.3rem 1.2rem;
+    margin-left: 0.5rem;
+    box-shadow: 0 2px 8px 0 #ff00cc88;
+    border: 2px solid #ff00cc;
+    animation: glowPriceSweet 2.5s infinite alternate;
+}
+@keyframes glowPriceSweet {
+    from { box-shadow: 0 0 8px 0 #ff00cc88; }
+    to { box-shadow: 0 0 24px 4px #00fff088; }
+}
+.menu-card-sweet .badge-available, .menu-card-sweet .badge-unavailable {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.01rem;
+    font-weight: 600;
+    border-radius: 2.5rem 1.5rem 2.5rem 1.5rem;
+    padding: 0.4em 1.2em;
+    background: linear-gradient(90deg, #ff00cc 0%, #00fff0 100%);
+    color: #fff;
+    border: 1.5px solid #ff00cc;
+    animation: badgePulseSweet 2.2s infinite alternate;
+}
+@keyframes badgePulseSweet {
+    from { box-shadow: 0 0 8px 0 #ff00cc88; }
+    to { box-shadow: 0 0 18px 2px #00fff088; }
+}
+.menu-card-sweet .badge-unavailable {
+    background: linear-gradient(90deg, #e57373 0%, #00fff0 100%);
+    border: 1.5px solid #e57373;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .menu-card-desert .card-body, .menu-card-hot .card-body, .menu-card-sweet .card-body {
+        padding: 1rem 0.75rem 1rem 0.75rem;
+    }
+    .menu-card-desert .card-title, .menu-card-hot .card-title, .menu-card-sweet .card-title {
+        font-size: 1.08rem;
+    }
+    .menu-card-desert .price, .menu-card-hot .price, .menu-card-sweet .price {
+        font-size: 1.05rem;
+        padding: 0.22rem 0.8rem;
+    }
+}
+@media (max-width: 480px) {
+    .menu-card-desert .card-body, .menu-card-hot .card-body, .menu-card-sweet .card-body {
+        padding: 0.75rem 0.5rem 0.75rem 0.5rem;
+    }
+    .menu-card-desert .card-title, .menu-card-hot .card-title, .menu-card-sweet .card-title {
+        font-size: 1.01rem;
+    }
+    .menu-card-desert .price, .menu-card-hot .price, .menu-card-sweet .price {
+        font-size: 0.98rem;
+        padding: 0.15rem 0.5rem;
+    }
+} 
+
+/* Homepage warm gradient background with food-inspired shapes */
+.home-bg-decor {
+    min-height: 100vh;
+    background: linear-gradient(120deg, #fff7e6 0%, #ffe0b2 60%, #ffd180 100%);
+    position: relative;
+    overflow: hidden;
+}
+.home-bg-decor::before, .home-bg-decor::after {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.18;
+}
+.home-bg-decor::before {
+    width: 340px;
+    height: 340px;
+    left: -120px;
+    top: 80px;
+    background: radial-gradient(circle at 60% 40%, #ffb74d 60%, #fffde7 100%);
+    border-radius: 50% 60% 40% 60% / 60% 40% 60% 50%;
+    box-shadow: 0 8px 32px 0 #ffb74d44;
+}
+.home-bg-decor::after {
+    width: 220px;
+    height: 220px;
+    right: -80px;
+    bottom: 60px;
+    background: radial-gradient(circle at 40% 60%, #ffd180 60%, #fffde7 100%);
+    border-radius: 60% 40% 60% 50% / 50% 60% 40% 60%;
+    box-shadow: 0 8px 32px 0 #ffd18044;
+}
+/* Extra food-inspired shapes */
+.home-bg-decor .food-shape {
+    position: absolute;
+    z-index: 1;
+    opacity: 0.22;
+    pointer-events: none;
+    border-radius: 50%;
+}
+.food-shape.orange {
+    width: 60px; height: 60px;
+    left: 12%; top: 68%;
+    background: radial-gradient(circle at 60% 40%, #ff9800 70%, #fffde7 100%);
+}
+.food-shape.cream {
+    width: 40px; height: 40px;
+    left: 70%; top: 18%;
+    background: radial-gradient(circle at 40% 60%, #fffde7 80%, #ffe0b2 100%);
+}
+.food-shape.gold {
+    width: 32px; height: 32px;
+    left: 80%; top: 80%;
+    background: radial-gradient(circle at 60% 40%, #ffd180 80%, #fffde7 100%);
+}
+.food-shape.brown {
+    width: 24px; height: 24px;
+    left: 30%; top: 30%;
+    background: radial-gradient(circle at 60% 40%, #bc6c25 80%, #fffde7 100%);
+} 
+
+/* Unique, catchy city restaurant card style */
+.city-card-unique {
+    position: relative;
+    background: rgba(255,255,255,0.82);
+    border-radius: 2.5rem 1.2rem 2.2rem 3.2rem / 1.8rem 2.8rem 2.2rem 2.5rem;
+    box-shadow: 0 8px 32px 0 rgba(255, 183, 77, 0.13), 0 3px 12px 0 rgba(220, 53, 69, 0.08);
+    border: 3px solid transparent;
+    background-clip: padding-box;
+    overflow: hidden;
+    transition: box-shadow 0.4s, transform 0.4s, border 0.4s;
+    margin-bottom: 2rem;
+    z-index: 1;
+}
+.city-card-unique::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border-radius: 2.5rem 1.2rem 2.2rem 3.2rem / 1.8rem 2.8rem 2.2rem 2.5rem;
+    padding: 2.5px;
+    background: linear-gradient(120deg, #ffd180 0%, #ffb74d 50%, #ffe0b2 100%);
+    background-size: 200% 200%;
+    animation: borderMoveCity 3s linear infinite;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+@keyframes borderMoveCity {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+.city-card-unique:hover {
+    box-shadow: 0 16px 48px 0 #ffd18055, 0 6px 24px 0 #ffb74d55;
+    transform: translateY(-8px) scale(1.025) rotate(-1deg);
+    border-color: #ffb74d;
+}
+.city-card-unique img {
+    border-radius: 2.2rem 1.1rem 2rem 2.8rem / 1.5rem 2.2rem 2rem 2.2rem;
+    object-fit: cover;
+}
+@media (max-width: 768px) {
+    .city-card-unique {
+        border-radius: 1.5rem 0.8rem 1.2rem 2rem / 1.2rem 1.8rem 1.2rem 1.5rem;
+    }
+    .city-card-unique img {
+        border-radius: 1.2rem 0.6rem 1rem 1.4rem / 0.8rem 1.2rem 1rem 1.2rem;
+    }
+} 

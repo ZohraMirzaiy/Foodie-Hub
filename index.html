@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Foodie Hub - Korean Cuisine</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="bi bi-egg-fried me-2"></i>Foodie Hub
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#restaurants">Restaurants</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h1 class="hero-title">Welcome to Foodie Hub</h1>
+                        <p class="hero-subtitle">Order your favorite Korean meals instantly!</p>
+                        <a href="#restaurants" class="btn btn-primary btn-lg">Explore Restaurants</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurants Section -->
+    <section id="restaurants" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Our Korean Restaurants</h2>
+                    <p class="section-subtitle">Discover authentic Korean cuisine</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Restaurant 1 -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="card restaurant-card h-100">
+                        <img src="12.jpg" class="card-img-top" alt="Seoul BBQ House">
+                        <div class="card-body">
+                            <h5 class="card-title">Seoul BBQ House</h5>
+                            <p class="card-text">Authentic Korean BBQ with premium cuts of meat and traditional side dishes.</p>
+                            <a href="menu-seoul-bbq.html" class="btn btn-outline-primary">View Menu</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Restaurant 2 -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="card restaurant-card h-100">
+                        <img src="13.jpg" class="card-img-top" alt="K-Chicken Palace">
+                        <div class="card-body">
+                            <h5 class="card-title">K-Chicken Palace</h5>
+                            <p class="card-text">Crispy Korean fried chicken with various sauces and traditional accompaniments.</p>
+                            <a href="menu-k-chicken.html" class="btn btn-outline-primary">View Menu</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Restaurant 3 -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="card restaurant-card h-100">
+                        <img src="14.jpg" class="card-img-top" alt="Bibimbap Express">
+                        <div class="card-body">
+                            <h5 class="card-title">Bibimbap Express</h5>
+                            <p class="card-text">Fresh bibimbap bowls and traditional Korean rice dishes with colorful vegetables.</p>
+                            <a href="menu-bibimbap.html" class="btn btn-outline-primary">View Menu</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Restaurant 4 -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="card restaurant-card h-100">
+                        <img src="15.jpg" class="card-img-top" alt="Hot Pot Korea">
+                        <div class="card-body">
+                            <h5 class="card-title">Hot Pot Korea</h5>
+                            <p class="card-text">Warm and comforting Korean hot pot with fresh ingredients and rich broths.</p>
+                            <a href="menu-hot-pot.html" class="btn btn-outline-primary">View Menu</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Restaurant 5 -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="card restaurant-card h-100">
+                        <img src="16.jpg" class="card-img-top" alt="Street Food Seoul">
+                        <div class="card-body">
+                            <h5 class="card-title">Street Food Seoul</h5>
+                            <p class="card-text">Authentic Korean street food including tteokbokki, kimbap, and more.</p>
+                            <a href="menu-street-food.html" class="btn btn-outline-primary">View Menu</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Restaurant 6 -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="card restaurant-card h-100">
+                        <img src="17.jpg" class="card-img-top" alt="Sweet Seoul">
+                        <div class="card-body">
+                            <h5 class="card-title">Sweet Seoul</h5>
+                            <p class="card-text">Traditional Korean desserts and sweet treats with modern twists.</p>
+                            <a href="menu-desserts.html" class="btn btn-outline-primary">View Menu</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form Section -->
+    <section id="order" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Place Your Order</h2>
+                    <p class="section-subtitle">Fill out the form below to order your favorite Korean meals</p>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form action="#" class="order-form">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="customerName" class="form-label">Customer Name *</label>
+                                <input type="text" class="form-control" id="customerName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="phoneNumber" class="form-label">Phone Number *</label>
+                                <input type="tel" class="form-control" id="phoneNumber" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="restaurant" class="form-label">Restaurant *</label>
+                                <select class="form-select" id="restaurant" required>
+                                    <option value="">Choose a restaurant...</option>
+                                    <option value="seoul-bbq">Seoul BBQ House</option>
+                                    <option value="k-chicken">K-Chicken Palace</option>
+                                    <option value="bibimbap">Bibimbap Express</option>
+                                    <option value="hot-pot">Hot Pot Korea</option>
+                                    <option value="street-food">Street Food Seoul</option>
+                                    <option value="desserts">Sweet Seoul</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Menu Items</label>
+                                <div class="menu-items-container">
+                                    <div class="menu-item">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="bulgogi">
+                                            <label class="form-check-label" for="bulgogi">
+                                                Bulgogi (Korean BBQ Beef) - $15.99
+                                            </label>
+                                        </div>
+                                        <input type="number" class="form-control quantity-input" placeholder="Qty" min="0" max="10">
+                                    </div>
+                                    <div class="menu-item">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="bibimbap">
+                                            <label class="form-check-label" for="bibimbap">
+                                                Bibimbap (Mixed Rice Bowl) - $12.99
+                                            </label>
+                                        </div>
+                                        <input type="number" class="form-control quantity-input" placeholder="Qty" min="0" max="10">
+                                    </div>
+                                    <div class="menu-item">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="tteokbokki">
+                                            <label class="form-check-label" for="tteokbokki">
+                                                Tteokbokki (Spicy Rice Cakes) - $8.99
+                                            </label>
+                                        </div>
+                                        <input type="number" class="form-control quantity-input" placeholder="Qty" min="0" max="10">
+                                    </div>
+                                    <div class="menu-item">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="kimbap">
+                                            <label class="form-check-label" for="kimbap">
+                                                Kimbap (Korean Sushi) - $9.99
+                                            </label>
+                                        </div>
+                                        <input type="number" class="form-control quantity-input" placeholder="Qty" min="0" max="10">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">Place Order</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop" class="img-fluid rounded" alt="Korean Cuisine">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title">About Foodie Hub</h2>
+                    <p class="lead">Your gateway to authentic Korean cuisine in Canada</p>
+                    <p>Foodie Hub is your premier destination for authentic Korean dining experiences across Canada. We partner with the finest Korean restaurants from Toronto to Vancouver, bringing you traditional flavors and modern culinary innovations.</p>
+                    <p>From sizzling BBQ to comforting hot pots, from crispy fried chicken to delicate desserts, we offer a comprehensive selection of Korean dishes that cater to every palate and occasion. Our network spans major Canadian cities including Toronto, Vancouver, Calgary, Montreal, Edmonton, and Ottawa.</p>
+                    <p>Our mission is to connect Canadian food lovers with the rich culinary heritage of Korea, making authentic Korean cuisine accessible to everyone through our convenient online ordering platform.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Canadian Korean Restaurants Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Featured Canadian Korean Restaurants</h2>
+                    <p class="section-subtitle">Discover authentic Korean cuisine across Canada</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Toronto -->
+                <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                    <div class="card restaurant-card h-100">
+                        <img src="1.jpg" class="card-img-top" alt="Toronto Korean BBQ Restaurant">
+                        <div class="card-body">
+                            <h5 class="card-title">Toronto, Ontario</h5>
+                            <p class="card-text">Korea Town - Bloor Street West</p>
+                            <ul class="list-unstyled">
+                                <li><strong>Cho Sun Ok</strong> - <a href="https://maps.google.com/?q=7353+Yonge+St,+Thornhill,+ON" target="_blank" class="restaurant-link">7353 Yonge St, Thornhill</a></li>
+                                <li><strong>Korean Village Restaurant</strong> - <a href="https://maps.google.com/?q=628+Bloor+St+W,+Toronto,+ON" target="_blank" class="restaurant-link">628 Bloor St W</a></li>
+                                <li><strong>Buk Chang Dong Soon Tofu</strong> - <a href="https://maps.google.com/?q=691+Bloor+St+W,+Toronto,+ON" target="_blank" class="restaurant-link">691 Bloor St W</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Vancouver -->
+                <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                    <div class="card restaurant-card h-100">
+                        <img src="2.jpg" class="card-img-top" alt="Vancouver Korean BBQ Restaurant">
+                        <div class="card-body">
+                            <h5 class="card-title">Vancouver, British Columbia</h5>
+                            <p class="card-text">Korea Town - Robson Street</p>
+                            <ul class="list-unstyled">
+                                <li><strong>Jang Mo Jip</strong> - <a href="https://maps.google.com/?q=1719+Robson+St,+Vancouver,+BC" target="_blank" class="restaurant-link">1719 Robson St</a></li>
+                                <li><strong>Damso Modern Korean</strong> - <a href="https://maps.google.com/?q=868+Denman+St,+Vancouver,+BC" target="_blank" class="restaurant-link">868 Denman St</a></li>
+                                <li><strong>Hwang Kum</strong> - <a href="https://maps.google.com/?q=1642+Robson+St,+Vancouver,+BC" target="_blank" class="restaurant-link">1642 Robson St</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Calgary -->
+                <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                    <div class="card restaurant-card h-100">
+                        <img src="3.jpg" class="card-img-top" alt="Calgary Korean Restaurant - Busan Galmaegi">
+                        <div class="card-body">
+                            <h5 class="card-title">Calgary, Alberta</h5>
+                            <p class="card-text">Korea Town - 17th Avenue SW</p>
+                            <ul class="list-unstyled">
+                                <li><strong>Anju Restaurant</strong> - <a href="https://maps.google.com/?q=507+10+St+SW,+Calgary,+AB" target="_blank" class="restaurant-link">507 10 St SW</a></li>
+                                <li><strong>Korean BBQ House</strong> - <a href="https://maps.google.com/?q=1010+1+St+SW,+Calgary,+AB" target="_blank" class="restaurant-link">1010 1 St SW</a></li>
+                                <li><strong>Seoul Korean Restaurant</strong> - <a href="https://maps.google.com/?q=17+Ave+SW,+Calgary,+AB" target="_blank" class="restaurant-link">17 Ave SW</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Montreal -->
+                <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                    <div class="card restaurant-card h-100">
+                        <img src="4.jpg" class="card-img-top" alt="Montreal Korean Restaurant - Bornga">
+                        <div class="card-body">
+                            <h5 class="card-title">Montreal, Quebec</h5>
+                            <p class="card-text">Korea Town - Guy-Concordia</p>
+                            <ul class="list-unstyled">
+                                <li><strong>Mon Ami</strong> - <a href="https://maps.google.com/?q=1401+Guy+St,+Montreal,+QC" target="_blank" class="restaurant-link">1401 Guy St</a></li>
+                                <li><strong>Ganadara</strong> - <a href="https://maps.google.com/?q=1862+Maisonneuve+Blvd+W,+Montreal,+QC" target="_blank" class="restaurant-link">1862 Maisonneuve Blvd W</a></li>
+                                <li><strong>Kazu</strong> - <a href="https://maps.google.com/?q=1862+St+Catherine+St+W,+Montreal,+QC" target="_blank" class="restaurant-link">1862 St Catherine St W</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Edmonton -->
+                <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                    <div class="card restaurant-card h-100">
+                        <img src="5.jpg" class="card-img-top" alt="Edmonton Korean Restaurant">
+                        <div class="card-body">
+                            <h5 class="card-title">Edmonton, Alberta</h5>
+                            <p class="card-text">Korea Town - 34th Avenue</p>
+                            <ul class="list-unstyled">
+                                <li><strong>Lee House Korean Restaurant</strong> - <a href="https://maps.google.com/?q=10603+34+Ave+NW,+Edmonton,+AB" target="_blank" class="restaurant-link">10603 34 Ave NW</a></li>
+                                <li><strong>Korean BBQ House</strong> - <a href="https://maps.google.com/?q=34+Ave+NW,+Edmonton,+AB" target="_blank" class="restaurant-link">34 Ave NW</a></li>
+                                <li><strong>Seoul Fried Chicken</strong> - <a href="https://maps.google.com/?q=34+Ave+NW,+Edmonton,+AB" target="_blank" class="restaurant-link">34 Ave NW</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ottawa -->
+                <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                    <div class="card restaurant-card h-100">
+                        <img src="6.jpg" class="card-img-top" alt="Ottawa Korean Restaurant">
+                        <div class="card-body">
+                            <h5 class="card-title">Ottawa, Ontario</h5>
+                            <p class="card-text">Korea Town - Somerset Street</p>
+                            <ul class="list-unstyled">
+                                <li><strong>Alirang</strong> - <a href="https://maps.google.com/?q=134+Nelson+St,+Ottawa,+ON" target="_blank" class="restaurant-link">134 Nelson St</a></li>
+                                <li><strong>Korean House Restaurant</strong> - <a href="https://maps.google.com/?q=610+Somerset+St+W,+Ottawa,+ON" target="_blank" class="restaurant-link">610 Somerset St W</a></li>
+                                <li><strong>Seoul Mart & Restaurant</strong> - <a href="https://maps.google.com/?q=610+Somerset+St+W,+Ottawa,+ON" target="_blank" class="restaurant-link">610 Somerset St W</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section / Footer -->
+    <footer id="contact" class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="bi bi-egg-fried me-2"></i>Foodie Hub</h5>
+                    <p>Your premier destination for authentic Korean cuisine across Canada. Order your favorite meals with ease and enjoy the rich flavors of Korea delivered to your doorstep.</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Contact Information</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-envelope me-2"></i>info@foodiehub.com</li>
+                        <li><i class="bi bi-telephone me-2"></i>(416) 555-0123</li>
+                        <li><i class="bi bi-geo-alt me-2"></i>Toronto, Ontario, Canada</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-light me-3"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-twitter fs-4"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-youtube fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Zohra Mirzaiy. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
